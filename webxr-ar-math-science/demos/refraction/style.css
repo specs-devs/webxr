@@ -1,0 +1,41 @@
+.webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+html.xr-active,
+html.xr-active body {
+  overflow: hidden;
+}
+
+html.xr-active .landing-view {
+  display: none;
+}
+
+.launch-error {
+  position: fixed;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
+  z-index: 10;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: min(calc(100vw - 1.5rem), 36rem);
+  border-radius: 8px;
+  background: rgba(20, 10, 10, 0.92);
+  border: 1px solid #5a3030;
+  color: #f0b0b0;
+  font: 400 21px/1.55 var(--font), system-ui, sans-serif;
+  text-align: center;
+  pointer-events: none;
+}
+
+#VRButton {
+  display: none !important;
+}

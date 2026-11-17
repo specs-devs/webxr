@@ -1,0 +1,12 @@
+{
+  "name": "ar-math-science",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AR Math & Science \u2014 WebXR demos",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run build:demos && npx serve .",
+    "build:demos": "npm ci --prefix demos/refraction && npm run build --prefix demos/refraction && npm ci --prefix demos/boids && npm run build --prefix demos/boids && npm ci --prefix demos/pendulum && npm run build --prefix demos/pendulum && npm ci --prefix demos/quadric && npm run build --prefix demos/quadric && npm ci --prefix demos/spacetime && npm run build --prefix demos/spacetime && npm ci --prefix demos/attractor && npm run build --prefix demos/attractor && npm ci --prefix demos/shm && npm run build --prefix demos/shm && npm ci --prefix demos/revolution && npm run build --prefix demos/revolution && npm ci --prefix demos/chladni && npm run build --prefix demos/chladni && npm ci --prefix demos/voronoi && npm run build --prefix demos/voronoi",
+    "build": "npm run build:demos"
+  }
+}

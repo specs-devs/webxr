@@ -1,0 +1,24 @@
+{
+  "name": "webxr-pendulum",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open /index.dev.html",
+    "build": "vite build && npm run sync:deploy",
+    "sync:deploy": "rm -rf assets static && cp -R dist/assets assets && if [ -d dist/static ]; then cp -R dist/static static; fi",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "vite": "^4.5.2"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "lil-gui": "^0.19.0",
+    "three": "^0.162.0",
+    "three-custom-shader-material": "^5.4.0",
+    "troika-three-text": "^0.52.4",
+    "vite-plugin-glsl": "^1.2.1"
+  },
+  "description": "WebXR demo: pendulum"
+}

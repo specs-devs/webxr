@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="AR Math &amp; Science — WebXR demos">
+  <meta name="color-scheme" content="dark">
+  <title>AR Math &amp; Science — WebXR demos</title>
+  <link rel="preload" href="fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <main class="content" id="content">
+      <!-- Overview / grid view -->
+      <section class="view view-overview" id="view-overview">
+        <header class="view-head">
+          <div>
+            <h1 class="view-title">AR Math &amp; Science</h1>
+            <p class="view-desc">WebXR demos</p>
+          </div>
+        </header>
+        <div class="grid" id="grid"></div>
+      </section>
+
+      <!-- Demo detail / placeholder subpage -->
+      <section class="view view-detail" id="view-detail" hidden></section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

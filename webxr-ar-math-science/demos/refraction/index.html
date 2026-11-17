@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Refraction — AR Math &amp; Science WebXR demo.">
+  <meta name="color-scheme" content="dark">
+  <title>Refraction — WebXR</title>
+  <link rel="preload" href="/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app">
+    <main class="content landing-view" id="landing">
+      <section class="view view-detail">
+        <a class="detail-back" href="/"><span class="detail-back-icon" aria-hidden="true">‹</span> Back</a>
+        <div class="detail-intro">
+          <span class="detail-eyebrow">OPTICS</span>
+          <h1 class="detail-title">Refraction</h1>
+          <p class="detail-desc">Light bends as it passes through prisms and lenses, its path governed by Snell's Law.</p>
+          <div class="detail-launch">
+            <button class="btn btn-primary" type="button" id="launch-xr">
+              Launch in WebXR
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3H3.5A1.5 1.5 0 0 0 2 4.5v8A1.5 1.5 0 0 0 3.5 14h8a1.5 1.5 0 0 0 1.5-1.5V10"/><path d="M9 2h5v5M14 2 7 9"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="detail-hero has-media" id="detail-hero">
+          <video class="detail-hero-video" muted loop playsinline autoplay preload="auto"></video>
+          <script>
+            (function () {
+              var v = document.currentScript.previousElementSibling;
+              var hi = window.matchMedia('(orientation: landscape) and (min-width: 900px) and (hover: hover) and (pointer: fine)').matches;
+              v.src = '/thumbnails/refraction-' + (hi ? '1080' : '720') + '.mp4';
+            })();
+          </script>
+        </div>
+
+        <div class="notes">
+          <div class="notes-title notes-title-interactions">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 7.7V4.8c0-.5.4-.9.9-.9s.9.4.9.9v2.4"/><path d="M7 7.2V3.9c0-.5.4-.9.9-.9s.9.4.9.9v3.3"/><path d="M8.8 7.2V4.9c0-.5.4-.9.9-.9s.9.4.9.9v3.5"/><path d="M10.6 8V6.3c0-.5.4-.9.9-.9s.9.4.9.9v2.8c0 2.2-1.8 4-4 4h-.7c-1.4 0-2.6-.7-3.4-1.9L3.5 9.8c-.2-.4 0-.9.3-1.1.4-.2.8-.1 1.1.3L5.2 9.6"/></svg>
+            Interactions
+          </div>
+          <ul>
+            <li><strong>Two-hand pinch:</strong> rotate and move the scene</li>
+            <li><strong>Single pinch:</strong> grab and move objects</li>
+            <li><strong>Drag</strong> an object into the menu to delete it</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <p class="launch-error" id="launch-error" hidden></p>
+
+  <link rel="modulepreload" href="./assets/experience.js">
+  <script type="module" src="./landing.js"></script>
+</body>
+</html>
